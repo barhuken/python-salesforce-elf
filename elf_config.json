@@ -1,0 +1,13 @@
+{
+    "creds": {
+        "username": "yourSFusername",
+        "password": "yourSFpassword",
+        "security_token": "EXAMPLEabcdEFGH123456789jkLMNopQrs",
+        "domain": "login"
+    },
+    "setup": {
+        "start_date": "2021-07-01",
+        "end_date": "2021-07-31",
+        "file_path": "./myLogs"
+    }
+}

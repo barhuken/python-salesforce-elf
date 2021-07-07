@@ -1,40 +1,3 @@
-
-# python-salesforce-elf
-
-python-salesforce-elf is a simple [python3](https://www.python.org/downloads/) script used to extract all of the **Daily** EventLogs stored in a Salesforce org's [EventLogFile Object](https://salesforce-elf.herokuapp.com/) between a specified start and end date.
-
-## Installation
-
-Use the package manager [pip](https://pip.pypa.io/en/stable/) to install [pandas](https://pandas.pydata.org/pandas-docs/stable/getting_started/install.html) and [simple-salesforce](https://simple-salesforce.readthedocs.io/en/latest/). (You may need to install a version of [conda](https://docs.conda.io/projects/conda/en/4.6.0/user-guide/install/index.html) before installing the packages)
-
-```bash
-pip install pandas
-pip install simple-salesforce
-```
-
-## Usage
-```javascript
-//elf_config.json
-
-{
-    "creds": {
-        "username": "yourSFusername",
-        "password": "yourSFpassword",
-        "security_token": "EXAMPLEabcdEFGH123456789jkLMNopQrs",
-        "domain": "login"
-    },
-    "setup": {
-        "start_date": "2021-06-01",
-        "end_date": "2021-06-30",
-        "file_path": "./myLogs"
-    }
-}
-
-```
-
-```python
-# query_ELF.py
-
 import json
 import pandas as pd
 import os
@@ -104,10 +67,3 @@ for row in df_records.iterrows():
             f.close()
 
 print("Complete")
-```
-
-## Contributing
-Pull requests are welcome. 
-
-## License
-[MIT](https://choosealicense.com/licenses/mit/)
